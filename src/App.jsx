@@ -1,33 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import MainLayout from "./Components/Layouts/MainLayout";
+import Dashboard from "./Pages/Dashboard";
+import SignIn from " ./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Balance from "./Pages/Balance";
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<MainLayout />}></Route>
+            <Route path="SignIn" element={<SignIn />}></Route>
+            <Route path="SignUn" element={<SignUp />}></Route>
+            {/* <Route path="users">
+              <Route index element={<List />}></Route>
+              <Route path=":userId" element={<Single />}></Route>
+              <Route 
+                  path="new" element={<New inputs={userInputs} title="Add New User"/>}>
+              </Route>
+             
+
+            </Route> */}
+            <Route path="dashboard">
+                <Route index element={<Dashboard />}></Route>                
+            </Route>
+            <Route path="balance">
+                <Route index element={<Balance />}></Route>                
+            </Route>
+
+            
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
     </>
   )
 }
