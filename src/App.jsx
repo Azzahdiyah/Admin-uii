@@ -1,8 +1,7 @@
 import React from "react";
 import MainLayout from "./Components/Layouts/MainLayout";
 import Dashboard from "./Pages/Dashboard";
-import SignIn from " ./Pages/SignIn";
-import SignUp from "./Pages/SignUp";
+import SignIn from "./Pages/SignIn"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Balance from "./Pages/Balance";
 
@@ -17,7 +16,7 @@ function App() {
           <Route path="/">
             <Route index element={<MainLayout />}></Route>
             <Route path="SignIn" element={<SignIn />}></Route>
-            <Route path="SignUn" element={<SignUp />}></Route>
+            {/* <Route path="SignUn" element={<SignUp />}></Route> */}
             {/* <Route path="users">
               <Route index element={<List />}></Route>
               <Route path=":userId" element={<Single />}></Route>
