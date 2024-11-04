@@ -23,28 +23,29 @@ const Navbar = () => {
     },
     {
       id: "Bill",
-      link: "/transaction",
-      icon: <Icon.Transaction />,
+      link: "/bill",
+      icon: <Icon.Bill />,
       label: "Bill",
     },
     {
-      id: "Expenses",
-      link: "/transaction",
-      icon: <Icon.Transaction />,
-      label: "Expenses",
+      id: "Expencces",
+      link: "/expencces",
+      icon: <Icon.Expencces />,
+      label: "expencces",
     },
     {
       id: "Goals",
-      link: "/transaction",
-      icon: <Icon.Transaction />,
+      link: "/goals",
+      icon: <Icon.Goals />,
       label: "Goals",
     },
     {
       id: "Setttings",
-      link: "/transaction",
+      link: "/settings",
       icon: <Icon.Settings />,
       label: "Settings",
     },
+   
   ];
 
   return (
@@ -64,12 +65,12 @@ const Navbar = () => {
       </div>
       <div className="sticky bottom-12">
         <Link to="/logout">
-          <div className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white">
-            <div className="mx-auto sm:mx-0">
-            <Icon.Transaction />
+        <div className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white">
+	          <div className="mx-auto sm:mx-0">
+            <Icon.Logout />
             </div>
-            <div className="ms-3 hidden sm:block">Logout</div>
-          </div>
+	          <div className="ms-3 hidden sm:block">Logout</div>
+	        </div>
         </Link>
         <div className="border-b my-10 border-b-special-bg"></div>
         <div className="flex justify-between">
@@ -81,7 +82,7 @@ const Navbar = () => {
             <br />
             View Profile
           </div>
-          <div className="hidden sm:block self-center justify-self-end"><Icon.Transaction /></div>
+          <div className="hidden sm:block self-center justify-self-end"><Icon.Menu /></div>
         </div>
       </div>
     </nav>
