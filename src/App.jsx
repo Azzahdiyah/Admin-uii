@@ -1,46 +1,38 @@
-import React from "react";
-import MainLayout from "./Components/Layouts/MainLayout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import BalancePage from './Pages/Balance';
 import Dashboard from "./Pages/Dashboard";
-import SignIn from "./Pages/SignIn"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Balance from "./Pages/Balance";
+import ErrorRouter from "./Pages/errorRouter";
+import SignInPage from "./Pages/SignIn";
 
 
-function App() {
+
+const App = () => {
+  const myRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Dashboard/>,
+      errorElement: <ErrorRouter/>
+    },
+    {
+      path: "/login",
+      element: <SignInPage/>,
+    },
+    {
+      path: "/register",
+      element: <SignInPage/>,
+    },
+    {
+      path: "/balance",
+      element: <BalancePage/>,
+    },
+  ]);
 
   return (
     <>
-      <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route index element={<MainLayout />}></Route>
-            <Route path="SignIn" element={<SignIn />}></Route>
-            {/* <Route path="SignUn" element={<SignUp />}></Route> */}
-            {/* <Route path="users">
-              <Route index element={<List />}></Route>
-              <Route path=":userId" element={<Single />}></Route>
-              <Route 
-                  path="new" element={<New inputs={userInputs} title="Add New User"/>}>
-              </Route>
-             
-
-            </Route> */}
-            <Route path="dashboard">
-                <Route index element={<Dashboard />}></Route>                
-            </Route>
-            <Route path="balance">
-                <Route index element={<Balance />}></Route>                
-            </Route>
-
-            
-
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={myRouter} />
     </>
-    </>
-  )
-}
+  );
+    
+};
 
-export default App
+export default App;

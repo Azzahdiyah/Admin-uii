@@ -22,6 +22,21 @@ const AuthLayout = (props) => {
 
         {/* teks start */}
         <div className="my-9 px-7 flex justify-center text-xs text-gray-03 items-center flex-col static">
+          {type == "sign up" && (
+            <div className="font-bold text-xl">Create an Acount </div>
+          )}
+          {type == "forgot" && (
+            <>
+            <div className="font-bold text-xl">Forgot Password? </div>
+            <div className="text-gray-03 text-sm mt-2">
+               Enter email address to get the
+               <br/>
+               Password reset link
+               </div>
+            
+            
+            </>
+          )}
           <div className="border border-gray-05 w-full"></div>
           <div className="px-2 bg-special-mainBg absolute"> or Sign in with</div>
         </div>
@@ -94,19 +109,15 @@ const AuthLayout = (props) => {
 
         {/* link start */}
         <div className="flex justify-center">
-          {type === "sign up" ? (
+          {type == "sign up" ? (
             <>
               <span className="text-sm text-gray-03">
                 Already have an account?&nbsp;
               </span>
-              <Link to="/login" className="text-primary text-sm font-bold">
-                Sign In Here
-              </Link>
+              <a className="text-primary text-sm font-bold">Sign In Here</a>
             </>
           ) : (
-              <Link to="/register" className="text-primary text-sm font-bold">
-                Create an account
-              </Link>
+            <a className="text-primary text-sm font-bold">Create an account</a>
           )}
         </div>
         {/* link end */}

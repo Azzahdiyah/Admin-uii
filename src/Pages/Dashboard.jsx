@@ -1,7 +1,7 @@
 import React from "react";
 import MainLayout from "../Components/Layouts/MainLayout";
 import Card from "../components/Elements/Card";
-import './Dashboard.scss'; 
+
 
 const Dashboard = () => {
   return (
@@ -9,26 +9,45 @@ const Dashboard = () => {
       {/* top content start*/}
       <div className="mb-8 sm:flex sm:gap-6">
         <div className="sm:w-1/3">
-          <Card />
+        <Card
+          title ="Total Balance"
+          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+           />
         </div>
         <div className="sm:w-1/3">
-          <Card />
+          <Card
+          title ="Goals"
+          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+           />
+          
         </div>
         <div className="sm:w-1/3">
-          <Card />
+        <Card
+          title ="Upcoming bill"
+          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+           />
         </div>
       </div>
       {/* top content end*/}
       {/* bottom content start*/}
       <div className="mb-8 sm:flex sm:gap-6">
         <div className="sm:w-1/3">
-          <Card />
+        <Card
+          title ="Recent Transaction"
+          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+           />
         </div>
         <div className="sm:w-1/3">
-          <Card />
+        <Card
+          title ="Statistik"
+          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+           />
         </div>
         <div className="sm:w-1/3">
-          <Card />
+        <Card
+          title ="Expenses Breakdown"
+          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+           />
         </div>
       </div>
       {/* bottom content end*/}
