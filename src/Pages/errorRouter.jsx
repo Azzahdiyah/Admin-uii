@@ -1,12 +1,12 @@
 import React from 'react';
 import { useRouteError } from "react-router-dom";
-import Logo from "../components/Elements/Logo";
+import Logo from "../Components/Elements/Logo/index";
+
 
 const ErrorRouter = () => {
     const error = useRouteError();
   return (
-    <div
-    className="flex justify-center min-h-screen 
+    <div className="flex justify-center min-h-screen 
     items-center bg-special-mainBg flex-col">
         <Logo />
         <h1 className="text-2xl font-bold mt-3 mb-1">Sorry</h1>
