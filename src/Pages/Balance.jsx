@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from "../components/Elements/Card";
+import Card from "../Components/Elements/Card";
 import MainLayout from "../Components/Layouts/MainLayout";
 
 const Balance = () => {

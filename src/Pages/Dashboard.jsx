@@ -1,6 +1,6 @@
 import React from "react";
 import MainLayout from "../Components/Layouts/MainLayout";
-import Card from "../components/Elements/Card";
+import Card from "../Components/Elements/Card";
 
 
 const Dashboard = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import AuthLayout from "../components/Layouts/AuthLayout";
-import FormSignUp from '../components/Fragments/FormSignUp';
+import AuthLayout from "../Components/Layouts/AuthLayout";
+import FormSignUp from '../Components/Fragments/FormSignUp';
 
 const SignUpPage = () => {
   return (
