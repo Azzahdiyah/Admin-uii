@@ -65,7 +65,7 @@ const Navbar = () => {
       </div>
       <div className="sticky bottom-12">
         <Link to="/logout">
-        <div className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white">
+        <div className="flex hover:bg-special-bg3 hover:text-white px-4 py-3 rounded-md">
 	          <div className="mx-auto sm:mx-0">
             <Icon.Logout />
             </div>

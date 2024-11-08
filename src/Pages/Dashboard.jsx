@@ -7,48 +7,49 @@ const Dashboard = () => {
   return (
     <MainLayout type="dashboard">
       {/* top content start*/}
-      <div className="mb-8 sm:flex sm:gap-6">
-        <div className="sm:w-1/3">
+      <div className="mb-4 sm:flex sm:gap-6">
+        
         <Card
           title ="Total Balance"
           desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
            />
-        </div>
-        <div className="sm:w-1/3">
+        
+        
           <Card
           title ="Goals"
-          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum."
            />
           
-        </div>
-        <div className="sm:w-1/3">
+        
+        
         <Card
           title ="Upcoming bill"
           desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
            />
-        </div>
+        
       </div>
       {/* top content end*/}
       {/* bottom content start*/}
-      <div className="mb-8 sm:flex sm:gap-6">
-        <div className="sm:w-1/3">
+      <div className=" md:grid md:grid-cols-3 md:gap-6">
+        <div className="md:col-span-1">
         <Card
           title ="Recent Transaction"
-          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+          desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerumLorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum."
            />
         </div>
-        <div className="sm:w-1/3">
+        <div className="md:col-span-2 flex flex-col flex-1">
         <Card
           title ="Statistik"
-          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-           />
-        </div>
-        <div className="sm:w-1/3">
-        <Card
+          desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum."/>
+
+          <Card
           title ="Expenses Breakdown"
-          desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+          desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum. delectus. Perspiciatis aspernatur minus autem maxime vel dolor alias amet rerum."
            />
         </div>
+        
+      
+        
       </div>
       {/* bottom content end*/}
     </MainLayout>
