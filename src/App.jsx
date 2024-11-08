@@ -3,6 +3,7 @@ import BalancePage from './Pages/Balance';
 import Dashboard from "./Pages/Dashboard";
 import ErrorRouter from "./Pages/errorRouter";
 import SignInPage from "./Pages/SignIn";
+import GoalsPage from "./Pages/Goals";
 
 
 
@@ -24,6 +25,10 @@ const App = () => {
     {
       path: "/balance",
       element: <BalancePage/>,
+    },
+      {
+      path: "/goals",
+      element: <GoalsPage/>,
     },
     
   ]);
