@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouteError } from "react-router-dom";
-import Logo from "../Components/Elements/Logo/index";
+import Logo from "../Components/Elements/Logo";
 
 
 const ErrorRouter = () => {

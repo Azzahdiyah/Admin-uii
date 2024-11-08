@@ -25,26 +25,7 @@ const App = () => {
       path: "/balance",
       element: <BalancePage/>,
     },
-    // {
-    //   path: "/transaction",
-    //   element: <Transaction/>,
-    // },
-    // {
-    //   path: "/bill",
-    //   element: <BalancePage/>,
-    // },
-    // {
-    //   path: "/expencess",
-    //   element: <BalancePage/>,
-    // },
-    // {
-    //   path: "/goals",
-    //   element: <Goals/>,
-    // },
-    // {
-    //   path: "/settings",
-    //   element: <Setinggs/>,
-    // },
+    
   ]);
 
   return (
