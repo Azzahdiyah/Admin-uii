@@ -7,6 +7,8 @@ import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance";
 import GoalPage from "./pages/goal";
 import ExpensePage from "./pages/expense";
+import TransactionPage from "./pages/transaction";
+import BillPage from "./pages/bill";
  
 const App = () => {
   const myRouter = createBrowserRouter([
@@ -30,6 +32,14 @@ const App = () => {
     {
       path: "/balance",
       element: <BalancePage />,
+    },
+    {
+      path: "/transaction",
+      element: <TransactionPage />,
+    },
+    {
+      path: "/biil",
+      element: <BillPage />,
     },
     {
       path: "/goal",
