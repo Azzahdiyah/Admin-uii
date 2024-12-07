@@ -46,7 +46,7 @@ const BalancePage = () => {
       <div className="p-6">
         {/* Header */}
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold mb-2">Balances</h1>
+          <h1 className="text-xl font-semibold mb-2">Balances</h1>
         </div>
 
         {/* Grid Layout */}

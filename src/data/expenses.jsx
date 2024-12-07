@@ -6,7 +6,7 @@ export const expensesBreakdowns = [
       amount: 250,
       percentage: 15,
       icon: <Icon.Housing/>,
-      arrow: <Icon.ArrowDown />,
+      arrow: <Icon.ArrowDown />, 
     },
     {
       id: 2,

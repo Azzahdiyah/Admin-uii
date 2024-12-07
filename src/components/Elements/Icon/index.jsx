@@ -387,7 +387,7 @@ export const Icon = {
   Logout: LogoutIcon,
   KebabMenu: KebabMenuIcon,
   Food: FoodIcon,
-  Shopping: ShoppingIcon,
+  Shopping: ShoppingIcon, 
   Transportation:TransactionIcon,
   ArrowUp: ArrowUpIcon,
   ArrowRight: ArrowRightIcon,

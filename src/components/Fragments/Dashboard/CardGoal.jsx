@@ -6,7 +6,6 @@ import { Icon } from "../../Elements/Icon";
 const CardGoal = () => {
     const chartValue = goals.presentAmount * 100 / goals.targetAmount;
   return (
-    
     <Card
       title="Goals"
       desc={

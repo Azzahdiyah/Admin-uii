@@ -4,7 +4,6 @@ import Card from "../../Elements/Card";
 
 const CardStatistic = () => {
     
-
     return (
         <Card 
         variant="md:col-span-2 min-h-max" title="Statistics" 
