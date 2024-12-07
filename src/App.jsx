@@ -9,6 +9,7 @@ import GoalPage from "./pages/goal";
 import ExpensePage from "./pages/expense";
 import TransactionPage from "./pages/transaction";
 import BillPage from "./pages/bill";
+import SettingPage from "./pages/setting";
  
 const App = () => {
   const myRouter = createBrowserRouter([
@@ -38,7 +39,7 @@ const App = () => {
       element: <TransactionPage />,
     },
     {
-      path: "/biil",
+      path: "/bill",
       element: <BillPage />,
     },
     {
@@ -48,6 +49,10 @@ const App = () => {
     {
       path: "/expense",
       element: <ExpensePage />,
+    },
+    {
+      path: "/setting",
+      element: <SettingPage />,
     },
   ]);
 

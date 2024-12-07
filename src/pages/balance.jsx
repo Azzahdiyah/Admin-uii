@@ -5,7 +5,7 @@ import { Icon } from "../components/Elements/Icon";
 
 const BalancePage = () => {
   const balanceCard = accounts.map((account) => (
-    <div key={account.id} className="bg-white p-6 rounded-lg shadow mb-6">
+    <div key={account.id} className="bg-white p-6 rounded-lg shadow-xl mb-6">
     <div className="flex justify-between items-center mb-4">
     <h2 className="text-lg font-semibold">{account.accountType || "No Account Type"}</h2>
       <div className="flex items-center space-x-2">
@@ -54,7 +54,7 @@ const BalancePage = () => {
           {balanceCard}
 
           {/* Add Account Card */}
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
+          <div className="bg-white  rounded-lg shadow-xl mb-6 flex flex-col justify-center items-center">
             <button className="bg-teal-500 text-white px-4 py-2 rounded-full mb-4">
               Add Accounts
             </button>
