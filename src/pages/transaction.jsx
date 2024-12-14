@@ -53,23 +53,23 @@ const TransactionPage = () => {
                         </button>
                     ))}
                 </div>
-                <div className="bg-white rounded-lg shadow-xl flex-1 overflow-hidden">
+                <div className="bg-primary rounded-lg shadow-xl flex-1 overflow-hidden">
                     <table className="min-w-full bg-white">
-                        <thead className="bg-gray-50">
+                        <thead className="bg-primary">
                             <tr>
-                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-900">
                                     Items
                                 </th>
-                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-900">
                                     Shop Name
                                 </th>
-                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-900">
                                     Date
                                 </th>
-                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-900">
                                     Payment Method
                                 </th>
-                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-600">
+                                <th className="py-2 px-4 text-left text-sm font-semibold text-gray-900">
                                     Amount
                                 </th>
                             </tr>
@@ -77,7 +77,7 @@ const TransactionPage = () => {
                         <tbody>{transactionRows}</tbody>
                     </table>
                     <div className="flex justify-center mt-6 mb-6">
-                    <button className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600">
+                    <button className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-900">
                         Load More
                     </button>
                     </div>

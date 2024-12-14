@@ -5,7 +5,7 @@ import { Icon } from "../components/Elements/Icon";
 
 const BalancePage = () => {
   const balanceCard = accounts.map((account) => (
-    <div key={account.id} className="bg-white p-6 rounded-lg shadow-xl mb-6">
+    <div key={account.id} className="bg-primary p-6 rounded-lg shadow-xl mb-6">
     <div className="flex justify-between items-center mb-4">
     <h2 className="text-lg font-semibold">{account.accountType || "No Account Type"}</h2>
       <div className="flex items-center space-x-2">
@@ -26,14 +26,14 @@ const BalancePage = () => {
     </div>
 
       <p className="text-gray-500">{account.accountNumber}</p>
-      <p className="text-gray-400 text-sm">Account Number</p>
-      <p className="text-2xl font-semibold mt-4">${account.balance}</p>
-      <p className="text-gray-400 text-sm">Total amount</p>
+      <p className="text-gray-900 text-sm">Account Number</p>
+      <p className="text-2xl text-gray-900 font-semibold mt-4">${account.balance}</p>
+      <p className="text-gray-900 text-sm">Total amount</p>
       <div className="flex justify-between items-center mt-4">
-        <Link className="text-teal-500" to="#">
+        <Link className="text-teal-900" to="#">
           Remove
         </Link>
-        <Link className="text-teal-500 flex items-center" to="#">
+        <Link className="text-teal-900 flex items-center" to="#">
           Details
           <Icon.ArrowUpRight className="ml-1" />
         </Link>
@@ -54,11 +54,11 @@ const BalancePage = () => {
           {balanceCard}
 
           {/* Add Account Card */}
-          <div className="bg-white  rounded-lg shadow-xl mb-6 flex flex-col justify-center items-center">
+          <div className="bg-primary  rounded-lg shadow-xl mb-6 flex flex-col justify-center items-center">
             <button className="bg-teal-500 text-white px-4 py-2 rounded-full mb-4">
               Add Accounts
             </button>
-            <Link className="text-gray-400 text-sm" to="#">
+            <Link className="text-gray-900 text-sm" to="#">
               Edit Accounts
             </Link>
           </div>

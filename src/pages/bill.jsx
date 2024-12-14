@@ -22,18 +22,18 @@ const BillPage = () => {
                 />
             </div>
             <div>
-                <div className="font-semibold text-gray-800">{bill.name} - Yearly Plan</div>
-                <div className="text-sm text-gray-500 mt-1">
+                <div className="font-semibold text-gray-900">{bill.name} - Yearly Plan</div>
+                <div className="text-sm text-gray-900 mt-1">
                     For advanced security and more flexible controls, the Professional plan helps
                     you scale design processes company-wide.
                 </div>
             </div>
-            <div className="text-center text-gray-700">
+            <div className="text-center text-prymary">
                 <div className="font-medium">{bill.lastCharge}</div>
             </div>
             <div className="text-center">
                 <div className="bg-gray-100 rounded-lg p-3">
-                    <div className="text-lg font-bold text-gray-800">${bill.amount}</div>
+                    <div className="text-lg font-bold text-gray-900">${bill.amount}</div>
                 </div>
             </div>
         </div>
@@ -44,8 +44,8 @@ const BillPage = () => {
             <Card
                 title="Upcoming Bills"
                 desc={
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                        <div className="grid grid-cols-5 gap-4 text-gray-500 font-semibold border-b border-gray-300 pb-4 mb-4">
+                    <div className="bg-primary rounded-lg shadow-md p-6">
+                        <div className="grid grid-cols-5 gap-4 text-gray-900 font-semibold border-b border-gray-300 pb-4 mb-4">
                             <div className="text-center">Due Date</div>
                             <div className="text-center">Logo</div>
                             <div>Item Description</div>

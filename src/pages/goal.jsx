@@ -11,9 +11,9 @@ const GoalPage = () => {
       <div className="md:grid md:grid-cols-3 md:gap-x-6">
         <Card title="Goals"
               desc={
-                <div className="p-2">
-                  <div className="flex justify-between">
-                    <div className="flex">
+                <div className="p-2  " >
+                  <div className="flex justify-between ">
+                    <div className="flex ">
                       <span className="text-2xl font-bold me-4 self-center">
                         ${goals.presentAmount}
                       </span>

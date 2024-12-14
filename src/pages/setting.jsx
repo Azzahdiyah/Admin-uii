@@ -20,8 +20,8 @@ const SettingPage = () => {
                             key={tab}
                             className={
                                 activeTab === tab
-                                    ? "text-teal-500 border-b-2 border-teal-500 pb-2"
-                                    : "text-gray-500 pb-2"
+                                    ? "text-teal-900 border-b-2 border-teal-500 pb-2"
+                                    : "text-gray-900 pb-2"
                             }
                             value={tab}
                             onClick={handleClick}
@@ -30,11 +30,11 @@ const SettingPage = () => {
                         </button>
                     ))}
                 </div>
-                <div className="bg-white rounded-lg shadow-xl p-6">
+                <div className="bg-primary rounded-lg shadow-xl p-6">
                     {activeTab === "Account" && (
                         <div className="space-y-4">
                             <div className="flex flex-col items-center">
-                                <label className="text-gray-400 font-medium mb-2">
+                                <label className="text-gray-900 font-medium mb-2">
                                     Your Profile Picture
                                 </label>
                                 <div className="border-dashed border-2 border-gray-400 rounded-lg p-6 w-40 h-40 flex items-center  text-gray-400">
@@ -42,7 +42,7 @@ const SettingPage = () => {
                                 </div>
                             </div>                            
                             <div className="flex flex-col">
-                                <label className="text-gray-600 font-medium">Full Name</label>
+                                <label className="text-gray-900 font-medium">Full Name</label>
                                 <input
                                     type="text"
                                     value="Tanzir Rahman"
@@ -60,7 +60,7 @@ const SettingPage = () => {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label className="text-gray-600 font-medium">Username</label>
+                                <label className="text-gray-900 font-medium">Username</label>
                                 <input
                                     type="text"
                                     value="tanzir.rahman"
@@ -69,7 +69,7 @@ const SettingPage = () => {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label className="text-gray-600 font-medium">Phone Number</label>
+                                <label className="text-gray-900 font-medium">Phone Number</label>
                                 <input
                                     type="text"
                                     value="+880 | 51547 58868"
@@ -79,7 +79,7 @@ const SettingPage = () => {
                             </div>
 
                             <div className="flex  mt-6">
-                                <button className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600">
+                                <button className="bg-teal-500 text-gray-900 py-2 px-4 rounded hover:bg-teal-600">
                                     Update Profile
                                 </button>
                             </div>
@@ -88,7 +88,7 @@ const SettingPage = () => {
                     {activeTab === "Security" && (
                         <div className="space-y-4">
                         <div className="flex flex-col">
-                            <label className="text-gray-600 font-medium">Old Password</label>
+                            <label className="text-gray-900 font-medium">Old Password</label>
                             <input
                                 type="text"
                                 value="**********"
@@ -97,7 +97,7 @@ const SettingPage = () => {
                             />
                         </div>
                         <div className="flex flex-col">
-                            <label className="text-gray-600 font-medium">New Password</label>
+                            <label className="text-gray-900 font-medium">New Password</label>
                             <input
                                 type="email"
                                 value="**********"
@@ -106,7 +106,7 @@ const SettingPage = () => {
                             />
                         </div>
                         <div className="flex flex-col">
-                            <label className="text-gray-600 font-medium">Retype Password</label>
+                            <label className="text-gray-900 font-medium">Retype Password</label>
                             <input
                                 type="text"
                                 value="********"
@@ -115,7 +115,7 @@ const SettingPage = () => {
                             />
                         </div>
                         <div className="flex flex-col">
-                            <label className="text-gray-600 font-medium">Phone Number</label>
+                            <label className="text-gray-900 font-medium">Phone Number</label>
                             <input
                                 type="text"
                                 value="+880 | 51547 58868"
@@ -125,7 +125,7 @@ const SettingPage = () => {
                         </div>
 
                         <div className="flex  mt-6">
-                            <button className="bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600">
+                            <button className="bg-teal-500 text-gray-900 py-2 px-4 rounded hover:bg-teal-600">
                                 Update Profile
                             </button>
                         </div>
