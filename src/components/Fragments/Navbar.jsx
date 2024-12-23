@@ -1,8 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Icon } from "../Elements/Icon";
 import Logo from "../Elements/Logo";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../context/themeContext";
+import axios from "axios";
+import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
   const themes = [
@@ -14,6 +16,9 @@ const Navbar = () => {
   ];
   const {theme, setTheme } = useContext(ThemeContext);
   
+  
+  const {setIsLoggedIn, setName, name}= useContext(AuthContext);
+  const navigate = useNavigate();
   // const [theme, setTheme] = useState(themes[0]);
   const menus = [
     {
@@ -60,6 +65,31 @@ const Navbar = () => {
     },
   ];
 
+  const refreshToken = localStorage.getItem("refreshToken");
+
+const Logout = async () => {
+    try {
+      await axios.get("https://jwt-auth-eight-neon.vercel.app/logout", {
+        headers: {
+          Authorization: `Bearer ${refreshToken}`,
+        },
+      });
+
+      setIsLoggedIn(false);
+      setName("");
+      localStorage.removeItem("refreshToken");
+
+      navigate("/login");
+    } catch (error) {
+      setIsLoading(false);
+
+      if (error.response) {
+        setOpen(true);
+        setMsg({ severity: "error", desc: error.response.data.msg });
+      }
+    }
+  };
+
   return (
     <div className="bg-defaultBlack">
       <nav className="sticky top-0 text-special-bg2 sm:w-72 w-28 min-h-screen px-7 py-12 flex flex-col justify-between">
@@ -94,7 +124,7 @@ const Navbar = () => {
         </div>
         <div>
           <NavLink
-            to="/logout"
+            onClick={Logout}
             className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white"
           >
             <div className="mx-auto sm:mx-0 text-primary">
@@ -108,7 +138,7 @@ const Navbar = () => {
               <img src="images/profile.png" />
             </div>
             <div className="hidden sm:block">
-              <div className="text-white font-bold">Username</div>
+              <div className="text-white font-bold">{name}</div>
               <div className="text-xs">View Profile</div>
             </div>
             <div className="hidden sm:block self-center">
