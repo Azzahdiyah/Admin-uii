@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import MainLayout from "../components/Layouts/MainLayout";
 
 const SettingPage = () => {
@@ -12,11 +13,20 @@ const SettingPage = () => {
 
     return (
         <MainLayout type="setting">
-            <div>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+            >
                 <h2 className="text-2xl font-semibold mb-4">Settings</h2>
-                <div className="flex space-x-4 mb-4">
+                <motion.div
+                    className="flex space-x-4 mb-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
                     {tabs.map((tab) => (
-                        <button
+                        <motion.button
                             key={tab}
                             className={
                                 activeTab === tab
@@ -25,22 +35,44 @@ const SettingPage = () => {
                             }
                             value={tab}
                             onClick={handleClick}
+                            whileHover={{
+                                scale: 1.1,
+                                color: "#319795", // Teal color
+                            }}
+                            transition={{ duration: 0.2 }}
                         >
                             {tab}
-                        </button>
+                        </motion.button>
                     ))}
-                </div>
-                <div className="bg-primary rounded-lg shadow-xl p-6">
+                </motion.div>
+                <motion.div
+                    className="bg-primary rounded-lg shadow-xl p-6"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
                     {activeTab === "Account" && (
-                        <div className="space-y-4">
+                        <motion.div
+                            className="space-y-4"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.4 }}
+                        >
                             <div className="flex flex-col items-center">
                                 <label className="text-gray-900 font-medium mb-2">
                                     Your Profile Picture
                                 </label>
-                                <div className="border-dashed border-2 border-gray-400 rounded-lg p-6 w-40 h-40 flex items-center  text-gray-400">
+                                <motion.div
+                                    className="border-dashed border-2 border-gray-400 rounded-lg p-6 w-40 h-40 flex items-center text-gray-400"
+                                    whileHover={{
+                                        scale: 1.05,
+                                        borderColor: "#319795", // Teal border
+                                    }}
+                                    transition={{ duration: 0.2 }}
+                                >
                                     <span>Upload your photo</span>
-                                </div>
-                            </div>                            
+                                </motion.div>
+                            </div>
                             <div className="flex flex-col">
                                 <label className="text-gray-900 font-medium">Full Name</label>
                                 <input
@@ -77,62 +109,81 @@ const SettingPage = () => {
                                     className="border rounded-lg p-2 mt-1"
                                 />
                             </div>
-
-                            <div className="flex  mt-6">
-                                <button className="bg-teal-500 text-gray-900 py-2 px-4 rounded hover:bg-teal-600">
+                            <div className="flex mt-6">
+                                <motion.button
+                                    className="bg-teal-500 text-gray-900 py-2 px-4 rounded"
+                                    whileHover={{
+                                        scale: 1.05,
+                                        backgroundColor: "#38b2ac", // Darker teal
+                                    }}
+                                    whileTap={{ scale: 0.95 }}
+                                    transition={{ duration: 0.2 }}
+                                >
                                     Update Profile
-                                </button>
+                                </motion.button>
                             </div>
-                        </div>
+                        </motion.div>
                     )}
                     {activeTab === "Security" && (
-                        <div className="space-y-4">
-                        <div className="flex flex-col">
-                            <label className="text-gray-900 font-medium">Old Password</label>
-                            <input
-                                type="text"
-                                value="**********"
-                                readOnly
-                                className="border rounded-lg p-2 mt-1"
-                            />
-                        </div>
-                        <div className="flex flex-col">
-                            <label className="text-gray-900 font-medium">New Password</label>
-                            <input
-                                type="email"
-                                value="**********"
-                                readOnly
-                                className="border rounded-lg p-2 mt-1"
-                            />
-                        </div>
-                        <div className="flex flex-col">
-                            <label className="text-gray-900 font-medium">Retype Password</label>
-                            <input
-                                type="text"
-                                value="********"
-                                readOnly
-                                className="border rounded-lg p-2 mt-1"
-                            />
-                        </div>
-                        <div className="flex flex-col">
-                            <label className="text-gray-900 font-medium">Phone Number</label>
-                            <input
-                                type="text"
-                                value="+880 | 51547 58868"
-                                readOnly
-                                className="border rounded-lg p-2 mt-1"
-                            />
-                        </div>
-
-                        <div className="flex  mt-6">
-                            <button className="bg-teal-500 text-gray-900 py-2 px-4 rounded hover:bg-teal-600">
-                                Update Profile
-                            </button>
-                        </div>
-                    </div>
+                        <motion.div
+                            className="space-y-4"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            <div className="flex flex-col">
+                                <label className="text-gray-900 font-medium">Old Password</label>
+                                <input
+                                    type="text"
+                                    value="**********"
+                                    readOnly
+                                    className="border rounded-lg p-2 mt-1"
+                                />
+                            </div>
+                            <div className="flex flex-col">
+                                <label className="text-gray-900 font-medium">New Password</label>
+                                <input
+                                    type="email"
+                                    value="**********"
+                                    readOnly
+                                    className="border rounded-lg p-2 mt-1"
+                                />
+                            </div>
+                            <div className="flex flex-col">
+                                <label className="text-gray-900 font-medium">Retype Password</label>
+                                <input
+                                    type="text"
+                                    value="********"
+                                    readOnly
+                                    className="border rounded-lg p-2 mt-1"
+                                />
+                            </div>
+                            <div className="flex flex-col">
+                                <label className="text-gray-900 font-medium">Phone Number</label>
+                                <input
+                                    type="text"
+                                    value="+880 | 51547 58868"
+                                    readOnly
+                                    className="border rounded-lg p-2 mt-1"
+                                />
+                            </div>
+                            <div className="flex mt-6">
+                                <motion.button
+                                    className="bg-teal-500 text-gray-900 py-2 px-4 rounded"
+                                    whileHover={{
+                                        scale: 1.05,
+                                        backgroundColor: "#38b2ac", // Darker teal
+                                    }}
+                                    whileTap={{ scale: 0.95 }}
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    Update Profile
+                                </motion.button>
+                            </div>
+                        </motion.div>
                     )}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </MainLayout>
     );
 };

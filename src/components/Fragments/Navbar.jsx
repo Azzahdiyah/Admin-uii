@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { ThemeContext } from "../../context/themeContext";
 import axios from "axios";
 import { AuthContext } from "../../context/authContext";
+import { NotifContext } from "../../context/notifContext";
 
 const Navbar = () => {
   const themes = [
@@ -18,6 +19,7 @@ const Navbar = () => {
   
   
   const {setIsLoggedIn, setName, name}= useContext(AuthContext);
+  const { setMsg,  setOpen, setIsLoading}= useContext(NotifContext);
   const navigate = useNavigate();
   // const [theme, setTheme] = useState(themes[0]);
   const menus = [
@@ -68,6 +70,7 @@ const Navbar = () => {
   const refreshToken = localStorage.getItem("refreshToken");
 
 const Logout = async () => {
+  setIsLoading(true)
     try {
       await axios.get("https://jwt-auth-eight-neon.vercel.app/logout", {
         headers: {
@@ -75,21 +78,30 @@ const Logout = async () => {
         },
       });
 
-      setIsLoggedIn(false);
-      setName("");
-      localStorage.removeItem("refreshToken");
+  
+      setOpen(true);
+      setMsg({ severity: "success", desc: "Logout Success" });
 
-      navigate("/login");
+
+
     } catch (error) {
-      setIsLoading(false);
+    
 
       if (error.response) {
         setOpen(true);
         setMsg({ severity: "error", desc: error.response.data.msg });
       }
     }
-  };
 
+    setIsLoggedIn(false);
+    setName("");
+    setIsLoading(false);
+
+    localStorage.removeItem("refreshToken");
+
+    navigate("/login");
+  };
+  
   return (
     <div className="bg-defaultBlack">
       <nav className="sticky top-0 text-special-bg2 sm:w-72 w-28 min-h-screen px-7 py-12 flex flex-col justify-between">
@@ -103,8 +115,8 @@ const Logout = async () => {
               to={menu.link}
               className={({ isActive }) =>
                 isActive
-                  ? "flex bg-primary text-white font-bold px-4 py-3 rounded-md"
-                  : "flex hover:bg-special-bg3 hover:text-white px-4 py-3 rounded-md"
+                  ? "flex bg-primary text-white font-bold px-4 py-3 rounded-md zoom-in"
+                  : "flex hover:bg-special-bg3 hover:text-white px-4 py-3 rounded-md zoom-in"
               }
             >
               <div className="mx-auto sm:mx-0">{menu.icon}</div>
@@ -117,7 +129,7 @@ const Logout = async () => {
           {themes.map((t) => (
             <div
               key={t.name}
-              className={`${t.bgcolor} md:w-6 h-6 rounded-md cursor-pointer mb-2`}
+              className={`${t.bgcolor} md:w-6 h-6 rounded-md cursor-pointer mb-2 zoom-in`}
               onClick={() => setTheme(t)}
             ></div>
           ))}
@@ -125,7 +137,7 @@ const Logout = async () => {
         <div>
           <NavLink
             onClick={Logout}
-            className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white"
+            className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white zoom-in"
           >
             <div className="mx-auto sm:mx-0 text-primary">
               <Icon.Logout />
