@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
   const {theme, setTheme } = useContext(ThemeContext);
   
-  
+   
   const {setIsLoggedIn, setName, name}= useContext(AuthContext);
   const { setMsg,  setOpen, setIsLoading}= useContext(NotifContext);
   const navigate = useNavigate();
@@ -69,38 +69,35 @@ const Navbar = () => {
 
   const refreshToken = localStorage.getItem("refreshToken");
 
-const Logout = async () => {
-  setIsLoading(true)
+  const Logout = async () => {
+    setIsLoading(true);
+  
     try {
       await axios.get("https://jwt-auth-eight-neon.vercel.app/logout", {
         headers: {
           Authorization: `Bearer ${refreshToken}`,
         },
       });
-
-  
+      
       setOpen(true);
       setMsg({ severity: "success", desc: "Logout Success" });
-
-
-
+  
     } catch (error) {
-    
-
       if (error.response) {
         setOpen(true);
         setMsg({ severity: "error", desc: error.response.data.msg });
       }
     }
-
+  
     setIsLoggedIn(false);
     setName("");
     setIsLoading(false);
-
+  
     localStorage.removeItem("refreshToken");
-
+  
     navigate("/login");
   };
+  
   
   return (
     <div className="bg-defaultBlack">

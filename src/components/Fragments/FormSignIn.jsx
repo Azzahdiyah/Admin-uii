@@ -16,7 +16,7 @@ const FormSignIn = () => {
 
   const navigate = useNavigate();
 
-  const {
+  const { 
     register,
     handleSubmit,
     formState: { errors, isValid },
@@ -49,7 +49,7 @@ const FormSignIn = () => {
         setIsLoading(false); 
         navigate("/");
             } catch (error) {
-                setIsLoading(false); // Stop loader after error
+                setIsLoading(false); 
                 if (error.response) {
                     setOpen(true);
                     setMsg({ severity: "error", desc: error.response.data.msg });
