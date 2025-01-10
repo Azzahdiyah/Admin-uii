@@ -37,7 +37,7 @@ const Navbar = () => {
     },
     {
       id: "transaction",
-      link: "/transaction",
+      link: "/transaction", 
       icon: <Icon.Transaction />,
       label: "Transactions",
     },

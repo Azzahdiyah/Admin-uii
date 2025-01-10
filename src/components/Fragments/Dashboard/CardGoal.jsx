@@ -22,7 +22,7 @@ const CardGoal = () => {
           headers: {
             Authorization: `Bearer ${refreshToken}`,
           },
-        }
+        } 
       );
 
       setGoals({

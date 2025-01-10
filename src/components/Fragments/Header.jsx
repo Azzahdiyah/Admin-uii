@@ -13,7 +13,7 @@ const Header = () => {
         <div className="font-bold text-lg">{name}</div>
         <div className="ms-6 text-gray-03">{date}</div>
       </div>
-      <div className="flex">
+      <div className="flex"> 
         <div className="self-center">
           <NotificationsIcon className="text-gray-01 scale-110" />
         </div>

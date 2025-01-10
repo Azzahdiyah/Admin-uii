@@ -14,9 +14,9 @@ const DashboardPage = () => {
     <MainLayout type="dashboard">
       {/* top content start */}
       <motion.div
-          initial={{ opacity: 0, y: 20 }} // Start faded and slightly shifted down
-          animate={{ opacity: 1, y: 0 }}  // Fade in and move into place
-          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth timing
+          // initial={{ opacity: 0, y: 20 }} // Start faded and slightly shifted down
+          // animate={{ opacity: 1, y: 0 }}  // Fade in and move into place
+          // transition={{ duration: 0.6, ease: "easeOut" }} // Smooth timing
         className="md:grid md:grid-cols-3 md:gap-x-6"
       >
         <CardBalance />

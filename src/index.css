@@ -31,3 +31,28 @@
   .zoom-in {
     @apply duration-500 hover:translate-y-1 hover:scale-110;
   }
+  /* Dark mode styles */
+.dark {
+  @apply bg-gray-900;
+  @apply text-white;
+}
+
+.dark .bg-special-mainBg {
+  @apply bg-gray-800;
+}
+
+.dark .bg-primary {
+  @apply bg-gray-700;
+}
+
+.dark .text-gray-01 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-03 {
+  @apply text-gray-400;
+}
+
+.dark .bg-gray-05 {
+  @apply bg-gray-600;
+}
